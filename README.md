@@ -2,7 +2,7 @@
 
 A modern, responsive quiz application built with Next.js, React, and Tailwind CSS for conducting technical assessments and skill evaluations.
 
-![QuizSphere](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-sWgjiH3HNZNOU0Xxo7GJtNUTzy2m69.png)
+<!-- ![QuizSphere](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-sWgjiH3HNZNOU0Xxo7GJtNUTzy2m69.png) -->
 
 ## 🎯 Overview
 
