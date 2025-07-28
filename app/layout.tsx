@@ -7,8 +7,8 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "QuizSphere - Professional Assessment Platform",
   description: "QuizSphere - Advanced quiz and assessment platform for technical evaluations and skill testing",
-    generator: 'v0.dev'
-}
+    generator: 'Maneeshmkp'
+}  
 
 export default function RootLayout({
   children,
@@ -28,5 +28,5 @@ html {
       </head>
       <body>{children}</body>
     </html>
-  )
+  )   
 }
