@@ -55,7 +55,7 @@ export default function ResultsPage() {
       total: results.questions.length,
       percentage: Math.round((correct / results.questions.length) * 100),
     }
-  }
+  }     
 
   const getPerformanceLevel = (percentage: number) => {
     if (percentage >= 90) return { level: "Excellent", color: "text-green-600", bg: "bg-green-50", icon: Trophy }
