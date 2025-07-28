@@ -262,7 +262,7 @@ export default function QuizPage() {
                         {status === "visited" && status !== "answered" && (
                           <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white"></div>
                         )}
-                      </Button>
+                      </Button> 
                     )
                   })}
                 </div>
@@ -361,7 +361,7 @@ export default function QuizPage() {
                   >
                     <ChevronLeft className="w-4 h-4" />
                     Previous
-                  </Button>
+                  </Button> 
 
                   <div className="flex gap-3">
                     {quizState.currentQuestion === quizState.questions.length - 1 ? (
