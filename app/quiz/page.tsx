@@ -40,8 +40,23 @@ export default function QuizPage() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch("https://opentdb.com/api.php?amount=15&type=multiple")
-        const data = await response.json()
+        const response = await fetch("https://opentdb.com/api.php?amount=15&type=multiple", {
+          headers: {
+            "Accept": "application/json"
+          },
+          mode: "cors",
+        })
+
+      const data = await response.json();
+      console.log("✅ Raw API response", data);
+
+
+        // ✅ SAFETY CHECK
+      if (!data || data.response_code !== 0 || !Array.isArray(data.results)) {
+        console.error("Invalid API response:", data)
+        setIsLoading(false)
+        return;
+      }
 
         const formattedQuestions: Question[] = data.results.map((q: any, index: number) => ({
           id: index,
@@ -259,7 +274,7 @@ export default function QuizPage() {
                         {status === "answered" && (
                           <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
                         )}
-                        {status === "visited" && status !== "answered" && (
+                        {status === "visited" && (
                           <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white"></div>
                         )}
                       </Button> 
